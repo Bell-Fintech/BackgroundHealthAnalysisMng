@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-3-13 15:57:47 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="onesun.hbm.base.DetectionOption" table="CustomUserDetectionOption">
+        <id name="dataId" type="java.lang.String">
+            <column name="DATAID" />
+            <generator class="uuid" />
+        </id>
+        <property name="userId" type="java.lang.String">
+            <column name="USERID" />
+        </property>
+        <property name="keyRt" type="java.lang.String">
+            <column name="KEYRT" />
+        </property>
+        <property name="result" type="java.lang.String">
+            <column name="RESULT" />
+        </property>
+        <property name="flag" type="java.lang.String">
+            <column name="FLAG" />
+        </property>
+    </class>
+</hibernate-mapping>

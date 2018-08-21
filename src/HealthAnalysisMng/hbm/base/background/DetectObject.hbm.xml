@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="onesun.hbm.base.background.DetectObject" table="DetectObject">
+		<id name="dataId" type="string">
+			<column name="dataId" />
+			<generator class="uuid"></generator>
+		</id>
+		<property name="detectName" type="string">
+		  <column name="detectName" length="30"></column>
+		</property>
+	</class>
+</hibernate-mapping>

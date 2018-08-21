@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-10-30 14:49:48 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="onesun.hbm.base.FourCommonInspection" table="CustomFOURCOMMONINSPECTION">
+        <id name="dadaId" type="java.lang.String" access="field">
+            <column name="DADAID" />
+            <generator class="uuid" />
+        </id>
+         <property name="userId" type="string">
+            <column name="userId" length="50" >
+            <comment>用户id</comment>
+            </column>
+        </property>
+        <property name="memberCode" type="java.lang.String" access="field">
+            <column name="MEMBERCODE" />
+        </property>
+        <property name="seq_NO" type="java.lang.String" access="field">
+            <column name="SEQ_NO" />
+        </property>
+        <property name="health_suggest_message" type="java.lang.String" access="field">
+            <column name="HEALTH_SUGGEST_MESSAGE" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="onesun.hbm.base.background.Version" table="AppUpdate">
+		<id name="id" type="string">
+			<column name="id" />
+			<generator class="uuid"></generator>
+		</id>
+		<property name="appName" type="string">
+		  <column name="appName" length="20"></column>
+		</property>
+		<property name="apkName" type="string">
+		  <column name="apkName" length="20"></column>
+		</property>
+		<property name="appTag" type="string">
+		 <column name="appTag" length="10"></column>
+		</property>
+		<property name="channel" type="string">
+		  <column name="channel" length="10"></column>
+		</property>
+		<property name="version" type="string">
+		  <column name="version" length="11"></column>
+		</property>
+		<property name="downloadURL" type="string">
+		  <column name="downloadURL" length="150"></column>
+		</property>
+		<property name="description" type="string">
+		  <column name="description" length="280"></column>
+		</property>
+		<property name="available" type="string">
+		  <column name="available" length="10"></column>
+		</property>
+	</class>
+</hibernate-mapping>

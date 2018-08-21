@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-11-12 18:56:01 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="onesun.hbm.base.Electrocardio" table="CustomELECTROCARDIO">
+        <id name="dataId" type="java.lang.String">
+            <column name="DATAID" />
+            <generator class="uuid" />
+        </id>
+        <property name="userId" type="java.lang.String">
+            <column name="USERID" />
+        </property>
+        <property name="apptype" type="java.lang.String">
+            <column name="APPTYPE" />
+        </property>
+        <property name="checkTime" type="java.sql.Timestamp">
+            <column name="CHECKTIME" />
+        </property>
+        <property name="indbTime" type="java.sql.Timestamp">
+            <column name="INDBTIME" />
+        </property>
+        <property name="pictureurl" type="java.lang.String">
+            <column name="PICTUREURL" />
+        </property>
+        <property name="dataSource" type="java.lang.String">
+            <column name="DATASOURCE" />
+        </property>
+    </class>
+</hibernate-mapping>

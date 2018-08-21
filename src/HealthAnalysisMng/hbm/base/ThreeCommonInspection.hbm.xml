@@ -1,0 +1,177 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-10-30 13:56:28 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="onesun.hbm.base.ThreeCommonInspection" table="CustomTHREECOMMONINSPECTION">
+        <id name="dataId" type="java.lang.String">
+            <column name="DATAID" />
+            <generator class="uuid" />
+        </id>
+         <property name="userId" type="string">
+            <column name="userId" length="50" >
+            <comment>用户id</comment>
+            </column>
+        </property>
+        <property name="memberCode" type="java.lang.String">
+            <column name="MEMBERCODE" >
+            <comment> 会员编号</comment>
+            </column>
+        </property>
+        <property name="seq_NO" type="java.lang.String">
+            <column name="SEQ_NO" >
+            <comment> 序列</comment>
+            </column>
+        </property>
+        <property name="BMD" type="java.lang.Double">
+            <column name="BMD" >
+            <comment> 骨密度</comment>
+            </column>
+        </property>
+        <property name="pulmonary" type="java.lang.Double">
+            <column name="PULMONARY" >
+            <comment> 肺活量</comment>
+            </column>
+        </property>
+        <property name="forced_expiratory_volume" type="java.lang.Double">
+            <column name="FORCED_EXPIRATORY_VOLUME" >
+            <comment> 一秒钟用力吐气量</comment>
+            </column>
+        </property>
+        <property name="max_expiratory_flow" type="java.lang.Double">
+            <column name="MAX_EXPIRATORY_FLOW" >
+            <comment> 最大中段流速量</comment>
+            </column>
+        </property>
+        <property name="oxygen_saturation" type="java.lang.Double">
+            <column name="OXYGEN_SATURATION" >
+            <comment> 血氧饱和度</comment>
+            </column>
+        </property>
+        <property name="right_ear" type="java.lang.Double">
+            <column name="RIGHT_EAR" >
+            <comment> 右耳</comment>
+            </column>
+        </property>
+        <property name="left_ear" type="java.lang.Double">
+            <column name="LEFT_EAR" >
+            <comment> 左耳</comment>
+            </column>
+        </property>
+        <property name="right_eye_before_correction" type="java.lang.Double">
+            <column name="RIGHT_EYE_BEFORE_CORRECTION" >
+            <comment> 视力 右眼：矫正前</comment>
+            </column>
+        </property>
+        <property name="right_eye_after_correction" type="java.lang.Double">
+            <column name="RIGHT_EYE_AFTER_CORRECTION" >
+            <comment> 右眼：矫正后</comment>
+            </column>
+        </property>
+        <property name="left_eye_before_correction" type="java.lang.Double">
+            <column name="LEFT_EYE_BEFORE_CORRECTION" >
+            <comment> 左眼：矫正前</comment>
+            </column>
+        </property>
+        <property name="left_eye_after_correction" type="java.lang.Double">
+            <column name="LEFT_EYE_AFTER_CORRECTION" >
+            <comment> 左眼：矫正后</comment>
+            </column>
+        </property>
+        <property name="astigmatism" type="java.lang.String">
+            <column name="ASTIGMATISM" >
+            <comment> 散光</comment>
+            </column>
+        </property>
+        <property name="recognize_color" type="java.lang.String">
+            <column name="RECOGNIZE_COLOR" >
+            <comment>辩色力</comment>
+            </column>
+        </property>
+        <property name="right_eye_pressure" type="java.lang.String">
+            <column name="RIGHT_EYE_PRESSURE" >
+            <comment> 眼压（12-20）右眼</comment>
+            </column>
+        </property>
+        <property name="left_eye_pressure" type="java.lang.String">
+            <column name="LEFT_EYE_PRESSURE" >
+            <comment> 左眼</comment>
+            </column>
+        </property>
+        <property name="eye_ground_inspection" type="java.lang.String">
+            <column name="EYE_GROUND_INSPECTION" >
+            <comment> 眼底摄影检查 </comment>
+            </column>
+        </property>
+        <property name="slit_lamp" type="java.lang.String">
+            <column name="SLIT_LAMP" >
+            <comment> 裂隙灯检查</comment>
+            </column>
+        </property>
+        <property name="electrocardiogram" type="java.lang.String">
+            <column name="ELECTROCARDIOGRAM" >
+            <comment> 心电图</comment>
+            </column>
+        </property>
+        <property name="ultrasonography" type="java.lang.String">
+            <column name="ULTRASONOGRAPHY" >
+            <comment> 腹部超声波检查</comment>
+            </column>
+        </property>
+        <property name="check_Ent" type="java.lang.String">
+            <column name="CHECK_ENT" >
+            <comment> 耳鼻喉检查</comment>
+            </column>
+        </property>
+        <property name="cervical_smear" type="java.lang.String">
+            <column name="CERVICAL_SMEAR" >
+            <comment>  宫颈涂片</comment>
+            </column>
+        </property>
+        <property name="internal_examination" type="java.lang.String">
+            <column name="INTERNAL_EXAMINATION" >
+            <comment>内诊</comment>
+            </column>
+        </property>
+        <property name="lymph_and_thyroid" type="java.lang.String">
+            <column name="LYMPH_AND_THYROID" >
+            <comment> 淋巴结与甲状腺 </comment>
+            </column>
+        </property>
+        <property name="breast_scrotum" type="java.lang.String">
+            <column name="BREAST_SCROTUM" >
+            <comment> 乳房或阴囊触诊</comment>
+            </column>
+        </property>
+        <property name="anal_diagnosis" type="java.lang.String">
+            <column name="ANAL_DIAGNOSIS" >
+            <comment> 肛诊(男性含前列腺)</comment>
+            </column>
+        </property>
+        <property name="bones_skin_nails" type="java.lang.String">
+            <column name="BONES_SKIN_NAILS" >
+            <comment> 骨骼，皮肤和指甲</comment>
+            </column>
+        </property>
+        <property name="oral_examination" type="java.lang.String">
+            <column name="ORAL_EXAMINATION" >
+            <comment> 口腔检查</comment>
+            </column>
+        </property>
+        <property name="chest_X_ray" type="java.lang.String">
+            <column name="CHEST_X_RAY" >
+            <comment> 胸部X光检查 </comment>
+            </column>
+        </property>
+        <property name="abdominal_X" type="java.lang.String">
+            <column name="ABDOMINAL_X" >
+            <comment>腹部X光检查</comment>
+            </column>
+        </property>
+        <property name="UGI" type="java.lang.String">
+            <column name="UGI" >
+            <comment> 上消化道造影</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

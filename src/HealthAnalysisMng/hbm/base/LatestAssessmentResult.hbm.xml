@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="onesun.hbm.base.LatestAssessmentResult" table="EvaluateResult">
+     <id name="evaluateId" type="string">
+     <column name="evaluateId"></column>
+     <generator class="uuid"></generator>
+     </id>
+     <property name="userId" type="string">
+     <column name="userId" length="40" not-null="true"></column>
+     </property>
+     <property name="metabolicResultFlag" type="string">
+     <column name="metabolicResultFlag"></column>
+     </property>
+     <property name="waistHeightResultFlag" type="string">
+     <column name="waistHeightResultFlag"></column>
+     </property>
+     <property name="riskResultFlag" type="string">
+      <column name="riskResultFlag"></column>
+     </property>
+     <property name="bmiResultFlag" type="string">
+      <column name="bmiResultFlag"></column>
+     </property>
+     <property name="pressureResultFlag" type="string">
+      <column name="pressureResultFlag"></column>
+     </property>
+     <property name="fatResultFlag" type="string">
+     <column name="fatResultFlag"></column>
+     </property>
+     <property name="ateryResultFlag" type="string">
+       <column name="ateryResultFlag"></column>
+     </property>
+     <property name="sugarResultFlag" type="string">
+       <column name="sugarResultFlag"></column>
+     </property>
+     <property name="waistlineResultFlag" type="string">
+        <column name="waistlineResultFlag"></column>
+     </property>
+      <property name="bloodOxygenResultFlag" type="string">
+        <column name="bloodOxygenResultFlag"></column>
+     </property>
+     <property name="heartRateResultFlag" type="string">
+        <column name="heartRateResultFlag"></column>
+     </property>
+     <property name="temperatureResultFlag" type="string">
+        <column name="temperatureResultFlag"></column>
+     </property>
+     <property name="boneMineralResultFlag" type="string">
+        <column name="boneMineralResultFlag"></column>
+     </property>
+     <property name="fatRateResultFlag" type="string">
+      <column name="fatRateResultFlag"></column>
+     </property>
+     <property name="evaluate" type="java.sql.Date">
+       <column name="evaluate"></column>
+     </property>
+  </class>
+</hibernate-mapping>

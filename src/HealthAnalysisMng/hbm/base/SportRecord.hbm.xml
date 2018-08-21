@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-11-19 15:00:29 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="onesun.hbm.base.SportRecord" table="CustomUserSportRecord">
+        <id name="dataId" type="java.lang.String">
+            <column name="DATAID" />
+            <generator class="uuid" />
+        </id>
+        <property name="userId" type="java.lang.String">
+            <column name="USERID" />
+        </property>
+        <property name="distdance" type="java.lang.Double">
+            <column name="DISTDANCE" />
+        </property>
+        <property name="calorie" type="java.lang.Double">
+            <column name="CALORIE" />
+        </property>
+        <property name="stepNumber" type="java.lang.Double">
+            <column name="STEPNUMBER" />
+        </property>
+        <property name="startTime" type="java.sql.Timestamp">
+            <column name="STARTTIME" sql-type="timestamp" />
+        </property>
+        <property name="endTime" type="java.sql.Timestamp">
+            <column name="ENDTIME" sql-type="timestamp" />
+        </property>
+        <property name="inDBTime" type="java.sql.Timestamp">
+            <column name="INDBTIME" sql-type="timestamp" />
+        </property>
+        <property name="dataSource" type="java.lang.String">
+            <column name="DATASOURCE" />
+        </property>
+    </class>
+</hibernate-mapping>
