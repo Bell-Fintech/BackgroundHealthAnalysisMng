@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+
+<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+<meta http-equiv="description" content="this is my page">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<script type="text/javascript" charset="UTF-8" src="jslib/My97DatePicker4.8Beta2/My97DatePicker/WdatePicker.js"></script>
+
+<script type="text/javascript" charset="UTF-8" src="jslib/jquery-easyui-1.2.5/jquery-1.7.1.min.js"></script>
+
+<script type="text/javascript" charset="UTF-8" src="jslib/jquery.cookie.js"></script>
+
+<link id="easyuiTheme" rel="stylesheet" type="text/css" href="jslib/jquery-easyui-1.2.5/themes/gray/easyui.css">
+<script type="text/javascript" charset="UTF-8" src="jslib/changeEasyuiTheme.js"></script>
+<link rel="stylesheet" type="text/css" href="jslib/jquery-easyui-1.2.5/themes/icon.css">
+<script type="text/javascript" charset="UTF-8" src="jslib/jquery-easyui-1.2.5/jquery.easyui.min.js"></script>
+<script type="text/javascript" charset="UTF-8" src="jslib/jquery-easyui-1.2.5/locale/easyui-lang-zh_CN.js"></script>
+
+<link rel="stylesheet" type="text/css" href="jslib/jquery-easyui-portal/portal.css">
+<script type="text/javascript" charset="UTF-8" src="jslib/jquery-easyui-portal/jquery.portal.js"></script>
+
+<link rel="stylesheet" type="text/css" href="jslib/JQuery-zTree-v3.1/css/zTreeStyle/zTreeStyle.css">
+<script type="text/javascript" charset="UTF-8" src="jslib/JQuery-zTree-v3.1/js/jquery.ztree.all-3.1.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="jslib/osCss.css">
+<script type="text/javascript" charset="UTF-8" src="jslib/osUtil.js"></script>
+
+<script type="text/javascript" charset="UTF-8">
+	$(function() {
+
+		$('#datagrid').treegrid({
+			url : 'resourceController.do?datagrid',
+			border : false,
+			queryParams : {},
+			sortName : 'id',
+			sortOrder : 'asc',
+			idField : 'id',
+			treeField : 'name',
+			striped : true,
+			fit : true,
+			fitColumns : true,
+			title : '',
+			rownumbers : false,
+			frozenColumns : [ [ {
+				field : 'id',
+				hidden : true
+			}, {
+				title : '资源名称',
+				field : 'name',
+				width : 200
+			} ] ],
+			columns : [ [ {
+				field : 'url',
+				title : '资源地址',
+				width : 150
+			}, {
+				field : 'comments',
+				title : '资源描述',
+				width : 100
+			}, {
+				field : 'onoff',
+				title : '是否验证',
+				width : 35,
+				formatter : function(value, rowData, rowIndex) {
+					if (value == '1') {
+						return '<img src="images/icons/done_square.png"/>开启';
+					} else {
+						return '<img src="images/icons/caution.png"/>关闭';
+					}
+				}
+			} ] ],
+			toolbar : [ '-', {
+				text : '删除',
+				iconCls : 'icon-remove',
+				handler : function() {
+					var rows = $('#datagrid').treegrid('getSelections');
+					if (rows.length > 0) {
+						$.messager.confirm('请确认', '您要删除当前所选项目？', function(r) {
+							if (r) {
+								$.ajax({
+									url : 'resourceController.do?delete',
+									data : {
+										id : rows[0].id
+									},
+									cache : false,
+									dataType : "json",
+									type : "POST",
+									success : function(response) {
+										$('#datagrid').treegrid('unselectAll');
+										$('#datagrid').treegrid('reload');
+										$.messager.show({
+											title : '提示',
+											msg : response.msg
+										});
+									}
+								});
+							}
+						});
+					} else {
+						$.messager.alert('提示', '请选择要删除的记录！', 'error');
+					}
+				}
+			}, '-' ]
+		});
+
+	});
+</script>
+
+</head>
+
+<body class="easyui-layout" style="overflow: hidden;">
+	<div region="center" title="资源树" border="false" style="overflow: hidden;">
+		<table id="datagrid"></table>
+	</div>
+</body>
+</html>
